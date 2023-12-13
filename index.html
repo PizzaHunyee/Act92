@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>act9 Decryption</title>
+</head>
+<body>
+
+<script>
+function decrypt(text) {
+  var result = "";
+  for (var i = 0; i < text.length; i++) {
+    var charCode = text.charCodeAt(i);
+    // Perform the reverse substitution
+    var decryptedChar = charCode - 1;
+    result += String.fromCharCode(decryptedChar);
+  }
+  return result;
+}
+
+var encryptedText = "Encrypted text from act9";
+var decryptedText = decrypt(encryptedText);
+document.write("Decrypted Text: " + decryptedText);
+</script>
+
+</body>
+</html>
